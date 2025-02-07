@@ -135,7 +135,6 @@ nav {
     text-align: center;
     background: white;
 }
-
 .contact h2 {
     font-size: 36px;
     margin-bottom: 20px;
@@ -149,7 +148,6 @@ nav {
 .contact a:hover {
     text-decoration: underline;
 }
-
 /* Footer */
 footer {
     background: #333;
