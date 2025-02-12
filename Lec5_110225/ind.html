@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page</title>
+    <script>
+//         function two(){
+//     return 2;
+// }
+// function four(){
+//     return 4;
+// }
+// console.log(1);
+// console.log(two());
+// setInterval(()=>{
+//     console.log(3)
+// },3000)
+// console.log(four());
+// setInterval(()=>{
+//     console.log(3)
+// },5000)
+// console.log(6)
+
+
+
+
+// for(let i=1;i<=6;i++){
+    
+//     setTimeout(()=>{
+//         console.log(i);
+//     });
+//     }
+
+
+
+
+// for (var i = 1; i <= 6; i++) {
+//     (function (j) {
+//         setTimeout(() => {
+//             console.log(j);
+//         }, 1000);
+//     })(i);
+// }
+
+
+ 
+// function x(){
+//     var a=7;
+//     function y(){
+//         console.log(a);
+//     }
+//     return y;
+// }
+// var z =x();
+// console.log(z);
+// z();
+
+
+// function z(){
+//     var b = 900;
+//     function x(){
+//         var a=7;
+//         function y(){
+//             console.log(a,b);
+//         }
+//         y();
+//     }
+// x();
+// }
+// z();
+
+// var count=0;
+// function increment(){
+//     count++;
+// }
+// increment();
+// increment();
+// increment();
+// console.log(count);
+
+
+//with clouser
+
+// function ans(){
+//     var count=0;
+//     function increment(){
+//         count++;
+//     }
+//         increment();
+//         increment();
+//         increment();
+//        console.log(count);
+//     }
+//     ans();
+
+// function counter(){
+//     var count=0;
+//     return function increment(){
+//             count++;
+//             console.log(count);
+//         }
+//     }
+//     var counter1=counter();
+//     counter1();
+//     counter1();
+//     counter1();
+//     counter1();
+
+
+
+
+function counter() {
+    var count = 0;
+    return {
+        count: count,
+        increment: function () {
+            this.count++; 
+            console.log(this.count);
+        },
+        decrement: function () {
+            this.count--; 
+            console.log(this.count);
+        }
+    };
+}
+
+
+</script>
+</head>
+<body>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur, nobis illo id inventore nihil itaque. Perferendis, dolore praesentium nemo a asperiores adipisci similique rerum harum, exercitationem laudantium sunt ea voluptatibus.
+        </p>
+    </div>
+    </body>
+    </html>
