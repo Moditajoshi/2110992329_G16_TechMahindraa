@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page</title>
+</head>
+<script>
+function reachedRestaurant(){
+    console.log("Reached Restaurant");
+    setTimeout(callback,1000);
+}
+function tableFinding(){
+    console.log("Table Finding");
+    setTimeout(callback,1000);
+}
+function priceCheck(){
+    console.log("Price Check");
+    setTimeout(callback,1000);
+}
+function starterOrder(){
+    console.log("Starter Order");
+    setTimeout(callback,1000);
+}
+function mainCourse(){
+    console.log("Main Course");
+    setTimeout(callback,1000);
+}
+function dessert(){
+    console.log("Dessert");
+    setTimeout(callback,1000);
+}
+function paybill(){
+    console.log("Pay Bill");
+    setTimeout(callback,1000);
+}
+function leave(){
+    console.log("Leave");
+    setTimeout(callback,1000);
+}
+//chaining the callback
+
+// reachedRestaurant()
+// tableFinding();
+// priceCheck();
+// starterOrder();
+// mainCourse();
+// dessert();
+
+reachedRestaurant(() => {
+    tableFinding(() => {
+        priceCheck(() => {
+            starterOrder(() => {
+                mainCourse(() => {
+                    dessert(() => {
+                        paybill(() => {
+                            leave();
+                        });
+                    });
+                });
+            });
+        });
+    });     //pyramid of doom (expansion of code horizontally)(to solve this we use promises)
+});
+
+
+     
+
+      
+</script>
+<body>
+    <h1> helooooooooo</h1>
+          <!-- <button id="btn-click">click</button>
+          <button id="btn-click2">click</button> -->
+          
+
+
+    
+         <!-- //  function a(){
+        //     console.log("function a");
+        //    }
+        //    function b(x){
+        //     console.log("function b");
+        //     a();
+        //    }
+        //    b(a());
+
+
+        // var count=0;
+        // document.getElementById("btn-click").
+        // addEventListener("click",function(){
+        //   count++;
+        //   console.log("clicked");
+        // });
+
+        // document.getElementById("btn-click2").
+        // addEventListener("click",function(){
+        //   count++;
+        //   console.log("clicked");
+        // });
+
+
+//         function createClickHandler() {
+//     let count = 0; // Private variable inside the closure
+
+//     return function () { // Inner function (closure)
+//         count++;
+//         console.log("clicked", count);
+//     };
+// }
+
+// document.getElementById("btn-click").addEventListener("click", createClickHandler());
+// document.getElementById("btn-click2").addEventListener("click", createClickHandler());
+
+
+//type conversion
+
+// function a(){
+//     console.log(3);
+// }
+// function b(){
+//     console.log(4);
+// }
+// function c(){
+//     console.log(5);
+// }
+// setTimeout(10,1000);
+// function d(){
+//     console.log(6);
+// }
+// setInterval(9,2000); -->
+     
+</body>
+    </html>
