@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page</title>
+</head>
+<script>
+    //reduce method
+    //SUM OF ARRAY simple
+    //const arr=[5,7,8,9];
+        // var sumofarr=0;
+        // for(let i=0;i<arr.length;i++){
+        //     sumofarr+=arr[i];      //acc   curr
+        // }
+        // console.log(sumofarr);
+        // const ans=arr.reduce(function(acc,curr){  //acc->accu
+        //     acc=acc+curr;
+        //     return acc;  
+        // },0);
+        // console.log(ans);
+
+
+
+//         const users = [
+//     { firstName: "a1", lastName: "a2", age: 25 },
+//     { firstName: "b1", lastName: "b2", age: 22 },
+//     { firstName: "c1", lastName: "c2", age: 22 },
+//     { firstName: "d1", lastName: "d2", age: 22 },
+//     { firstName: "e1", lastName: "e2", age: 40 },
+//     { firstName: "f1", lastName: "f2", age: 26 },
+// ];
+
+// const count = users.reduce(function (acc, curr) {
+//     if (curr.age === 25) {
+//         return acc + 1;
+//     }
+//     return acc;
+// }, 0);
+
+// console.log(count);      correct thiss later
+
+
+
+
+
+// dataMap=[2,4,5,68,6,7];
+// var maxNum=0;
+// for(let i=0;i<dataMap.length;i++){
+//     if(maxNum<dataMap[i]){
+//         maxNum=dataMap[i];
+//     }
+// }
+// console.log(maxNum);
+
+
+//with reduce
+
+// const ansMax=dataMap.reduce(function(acc,curr){
+// if(curr>acc){
+//     acc=curr;
+// }
+// return acc;
+// },0);
+// console.log(ansMax);
+
+
+
+
+// reachedRestaurant(() => {
+//     tableFinding(() => {
+//         priceCheck(() => {
+//             starterOrder(() => {
+//                 mainCourse(() => {
+//                     dessert(() => {
+//                         paybill(() => {
+//                             leave();
+//                         });
+//                     });
+//                 });
+//             });
+//         });
+//     });     //pyramid of doom or callback hell (expansion of code horizontally)(to solve this we use promises)
+// });
+
+//by promise
+
+// reachedRestaurant(function(){
+//     console.log("i reached egal motel")
+// })
+// .then(tableFinding)
+// .then(priceCheck)
+// .then(starterOrder)
+// .then(mainCourse)
+// .then(dessert) 
+
+// const myRestaurnetPromise=new Promise(resolve,reject){
+//     if(1:30>time>2:30){
+//         resolve("Yes successfully reached")
+//     }
+//     else{
+//         reject("cant reach at time");
+//     }
+// }
+
+
+
+//const cart=["shoes", "watches","bags","shirts"];
+// createOrder(cart,callback){
+//     console.log("order creation");
+
+//     orderPayment(orderId,callback){
+//         console.log("ordered payment");
+
+//         orderSummary(orderId,callback)
+//         console.log("ordered summary");
+
+//         updateWallet(){
+//             console.log("Wallet updated");
+//         }
+//     }
+// }
+
+
+//BY PROMISE
+
+// const cart=["shoes", "watches","bags","shirts"];
+const cart=[];
+function createOrder(cart){
+    const myPromise=new Promise(function(resolve,reject){
+        if(cart.length>0){
+            console.log("order created successfully")
+            resolve("12345");
+        }
+        else{
+            const err=new error("order failed")
+            reject(err.message);
+        }
+    });
+    return myPromise;
+}
+// console.log(createOrder(cart));
+
+
+function orderPayment(orderId){
+    console.log("order payment succesfull")
+}
+
+function orderSummary(orderId){
+    console.log("order summary created")
+}
+
+function updateWallet(orderId){
+    console.log("wallet updated")
+}
+
+createOrder(cart)
+.then(function(orderId){
+    return orderPayment(orderId)
+})
+.then(function(orderId){
+    return orderSummary(orderId)
+})
+.then(function(orderId){
+    return updateWallet()
+})
+.catch(function(err){   //error handling (if cart is empty)
+    console.log("Error occured")
+    console.log(err.message);
+})
+
+
+
+
+
+// createOrder(cart)
+// .then(orderPayment(orderId))
+// .then(orderSummary(orderId))
+// .then(updateWallet)
+
+
+
+    </script>
+<body>
+    <h1> helooooooooo</h1>
+</body>
+</html>
