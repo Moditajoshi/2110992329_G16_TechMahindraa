@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page</title>
+</head>
+<script>
+           // Task1
+
+//     function createCounter() {
+//     let count = 0; 
+
+//     return {
+//         increment: function () {
+//             count++;
+//             console.log(count);
+//         },
+//         decrement: function () {
+//             count--;
+//             console.log(count);
+//         },
+//         getCount: function () {
+//             return count;
+//         }
+//     };
+// }
+
+// const counter = createCounter();
+// counter.increment(); 
+// //counter.increment(); 
+// counter.decrement(); 
+// console.log(counter.getCount()); 
+
+
+
+       //Task2
+
+function memoizedFibonacci() {
+    let cache = {};
+    
+    function fibonacci(n) {
+        if (n in cache) {
+            return cache[n];
+        }
+        if (n <= 1) {
+            return n;
+        }
+        cache[n] = fibonacci(n - 1) + fibonacci(n - 2);
+        return cache[n];
+    }
+    
+    return fibonacci;
+}
+const fibonacci = memoizedFibonacci();
+console.log(fibonacci(10)); 
+console.log(fibonacci(20)); 
+console.log(fibonacci(30)); 
+
+</script>
+
+
+<body>
+    <h1> helooooooooo</h1>
+</body>
+</html>
